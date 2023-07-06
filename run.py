@@ -107,7 +107,7 @@ def load_parquet_button_clicked():
         if table:
             # Create a new window
             table_window = QMainWindow()
-            table_window.setWindowTitle("Parquet Table")
+            table_window.setWindowTitle(f"Parquet Table  - {file_path}")
             # Set the new window's location to be offset by the number of open windows
             table_window.setGeometry(100 + (20 * len(open_windows)), 100 + (20 * len(open_windows)), 800, 600)
             table_window.setCentralWidget(table)
@@ -122,7 +122,7 @@ def load_parquet_button_clicked():
 def create_table_window(table):
     # Create a new window
     table_window = QMainWindow()
-    table_window.setWindowTitle("Parquet Table")
+    table_window.setWindowTitle(f"Parquet Table - {table_window.file_path}")
     table_window.setGeometry(100, 100, 800, 600)
     table_window.setCentralWidget(table)
     # Append the window to the windows list
